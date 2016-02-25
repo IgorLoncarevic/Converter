@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         double vrednost;
         if(number > 1) {
             vrednost = Math.round(racun * 100d) / 100d;
-        }else if(number >0){
+        }else if(number >= 0){
             vrednost = Math.round(racun * 100000d) / 100000d;
         }else{
             lbs.setText("error");
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         double vrednost;
         if(number > 1) {
             vrednost = Math.round(racun* 100d)/100d;
-        }else if(number >0){
+        }else if(number >= 0){
             vrednost = Math.round(racun * 100000d) / 100000d;
         }else{
             kg.setText("error");
