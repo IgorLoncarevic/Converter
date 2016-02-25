@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Converter</string>
     <string name="action_settings">Settings</string>
+    <string name="zaUneti">Enter weight</string>
+    <string name="funte"><![CDATA[kg -> lbs]]></string>
+    <string name="kilogrami"><![CDATA[lbs -> kg]]></string>
 </resources>
