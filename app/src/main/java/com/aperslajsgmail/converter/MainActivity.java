@@ -63,13 +63,16 @@ public class MainActivity extends AppCompatActivity {
                 if(/*u.getText().toString() == null ||*/ u.getText().toString().trim().equals("")) {
                     lbs.setText("");
                     kg.setText("");
-                }else if(u.getText().toString().length() >= 6){
-                    double b = 1000000;
+                }else if(u.getText().toString().length() > 6){
+                    //double b = 1000000;
+                    //displayLbs(b);
+                    //displayKg(b);
 
-                    toast.setText("Number is too big!");
+                    toast.setText("Number is too long!");
                     toast.show();
-                    displayLbs(b);
-                    displayKg(b);
+
+                    lbs.setText("error");
+                    kg.setText("error");
 
                 }else{
                     double b = Double.parseDouble(u.getText().toString());
@@ -115,15 +118,34 @@ public class MainActivity extends AppCompatActivity {
 
     private void displayLbs(double number) {
         EditText lbs = (EditText) findViewById(R.id.lbsEdit);
-        double vrednost = Math.round(number * 2.20462262 * 100d)/100d;
+        double racun = number * 2.20462262;
+        double vrednost;
+        if(number > 1) {
+            vrednost = Math.round(racun * 100d) / 100d;
+        }else if(number >0){
+            vrednost = Math.round(racun * 100000d) / 100000d;
+        }else{
+            lbs.setText("error");
+            return;
+        }
+
         lbs.setText("" + vrednost);
     }
 
     private void displayKg(double number) {
         EditText kg = (EditText) findViewById(R.id.kgEdit);
-        double vrednost = Math.round(number * 0.45359237 * 100d) / 100d;
-        kg.setText("" + vrednost);
+        double racun = number * 0.45359237;
+        double vrednost;
+        if(number > 1) {
+            vrednost = Math.round(racun* 100d)/100d;
+        }else if(number >0){
+            vrednost = Math.round(racun * 100000d) / 100000d;
+        }else{
+            kg.setText("error");
+            return;
+        }
 
+        kg.setText("" + vrednost);
     }
 
     /*
@@ -172,5 +194,6 @@ public class MainActivity extends AppCompatActivity {
     //ogranici maksimalnu unetu vrednost (npr ako je broj preko 1m nek ga ne povecava)
     //ali vidi da to ne proverava svaki put
     //kod tate ne staje u ekran i fale slike
+    //aplikacija pukne kad ukucas prvo tacku
 
 }
