@@ -33,6 +33,7 @@
             android:hint="@string/zaUneti"
             android:ellipsize="start"
             android:gravity="center_horizontal"
+            android:maxLength="7"
             />
 
         <TextView

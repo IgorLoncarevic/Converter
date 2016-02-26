@@ -1,5 +1,6 @@
 package com.aperslajsgmail.converter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,8 @@ import android.text.TextWatcher;
 import android.view.Gravity;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.text.NumberFormat;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -41,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
         final Toast toast = Toast.makeText(contextToast, txtToast, durationToast);
         toast.setGravity(Gravity.CENTER, 0, 0);
 
+
         //ovo van klase stavi ljaljane
         final EditText u = (EditText) findViewById(R.id.unetiEdit);
         final EditText lbs = (EditText) findViewById(R.id.lbsEdit);
         final EditText kg = (EditText) findViewById(R.id.kgEdit);
-
 
         u.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -60,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 // set new value now
                 //l.setText(u.getText().toString()); //ovo bi prepisivalo samo tekst
 
+                //ovaj if mi sluzi da kad obrisem tekst, ne pukne aplikacija
                 if(/*u.getText().toString() == null ||*/ u.getText().toString().trim().equals("")) {
                     lbs.setText("");
                     kg.setText("");
@@ -75,17 +79,28 @@ public class MainActivity extends AppCompatActivity {
                     kg.setText("error");
 
                 }else{
-                    double b = Double.parseDouble(u.getText().toString());
-                    displayLbs(b);
-                    displayKg(b);
+                    try {
+                        double b = Double.parseDouble(u.getText().toString());
+                        displayLbs(b);
+                        displayKg(b);
+                    }
+                    catch (NumberFormatException e){
+                        //Toast.makeText(MainActivity.this,"Please Enter a valid double value",Toast.LENGTH_SHORT).show();
+                    }
+
+
+                    //if(u.getText().charAt(0) == '.'){
+                        //b = Double.parseDouble("0" + u.getText().toString());
+                        //KOPIRANO S NETA: str= str.replaceAll("\\.", "");
+                        //b = Double.parseDouble(u.getText().toString().replace("\\.","0."));
+                    //}
+
                 }
 
             }
+
+
         });
-
-
-
-
 
     }
 
@@ -180,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
     //napravi exception ili sta vec ako se ne unese vrednost CHECKED
     //Ukloni dugme CHECKED
     //izbaci negativne brojeve i takva sranja VEC JE OVAKVO
+    //ogranici koliko uneti broj moze da bude dugacak CHECKED
     //napravi novi tred da izbegnes The application may be doing too much work on its main thread. NE TREBA?
     //Nista sto menja interfejs se ne stavlja u tred!!! ZBOG OVOGA
     //dodaj slicicu ZA VELICINU TASTATURE
@@ -195,5 +211,6 @@ public class MainActivity extends AppCompatActivity {
     //ali vidi da to ne proverava svaki put
     //kod tate ne staje u ekran i fale slike
     //aplikacija pukne kad ukucas prvo tacku
+
 
 }
