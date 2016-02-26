@@ -226,6 +226,7 @@ public class MainActivity extends AppCompatActivity {
     //kod tate ne staje u ekran i fale slike
     //aplikacija pukne kad ukucas prvo tacku
     //mozda da tekstove promenis sa sp na dp, da se ne bi menjalo u odnosu na tastaturu
+    //promeni sliku puta, ima pozadinu :z
 
 
 }
