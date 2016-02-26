@@ -2,12 +2,15 @@ package com.aperslajsgmail.converter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -34,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         */
+
+
+        Toast.makeText(getApplicationContext(), "Click me for other converters", Toast.LENGTH_LONG).show();
+
+
 
         //Toast
         //Toast.makeText(getApplicationContext(), "Number is too big.", Toast.LENGTH_SHORT).show();
@@ -163,6 +171,12 @@ public class MainActivity extends AppCompatActivity {
         kg.setText("" + vrednost);
     }
 
+    public void slikaOnClick(View v){
+        startActivity(new Intent(getApplicationContext(), InchesActivity.class));
+    }
+
+
+
     /*
     //funkcija koja je sluzila za dugme kog vise nema
 
@@ -211,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
     //ali vidi da to ne proverava svaki put
     //kod tate ne staje u ekran i fale slike
     //aplikacija pukne kad ukucas prvo tacku
+    //mozda da tekstove promenis sa sp na dp, da se ne bi menjalo u odnosu na tastaturu
 
 
 }

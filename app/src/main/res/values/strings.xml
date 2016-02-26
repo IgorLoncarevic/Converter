@@ -4,4 +4,5 @@
     <string name="zaUneti">Enter weight</string>
     <string name="funte"><![CDATA[kg -> lbs]]></string>
     <string name="kilogrami"><![CDATA[lbs -> kg]]></string>
+    <string name="inci"><![CDATA[cm -> inches]]></string>
 </resources>
