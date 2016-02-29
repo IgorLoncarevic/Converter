@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -27,7 +28,7 @@ import java.io.Writer;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Context context = this;
+    Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,6 +143,55 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+    //ova dva nacina citanja fajla iz aseta
+    /*
+    1.
+    try {
+        BufferedReader br = new BufferedReader(new InputStreamReader(context.getAssets().open("about.txt")));
+    } catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+
+    2.
+    AssetFileDescriptor descriptor = getAssets().openFd("about.txt");
+    FileReader reader = new FileReader(descriptor.getFileDescriptor());
+    */
+
+    /* vraca lokaciju stringa opet
+    public void ispisiProba(View v){
+
+        TextView proba = (TextView) findViewById(R.id.editTextProba);
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(context.getAssets().open("about.txt")));
+            String test;
+            int anzahl=0;
+            while ((test=br.readLine()) != null)
+            {
+                anzahl++;
+            }
+
+            String[] array = new String[anzahl];
+
+            String line;
+            int i = 0;
+
+            while((line=br.readLine())!=null)
+            {
+                array[i] = line;
+                i++;
+            }
+
+            proba.setText(array.toString());
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    */
 
 
     //2.20462262
