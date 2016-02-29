@@ -2,7 +2,6 @@ package com.aperslajsgmail.converter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -13,17 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.StringWriter;
-import java.io.Writer;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -136,12 +125,16 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                return true;
+            case R.id.about:
+                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+                //NavUtils.navigateUpFromSameTask(this); //ovo bi trebalo da me vraca sa about na main :z
+                return true;
+            default:
+            return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
 
@@ -158,39 +151,6 @@ public class MainActivity extends AppCompatActivity {
     2.
     AssetFileDescriptor descriptor = getAssets().openFd("about.txt");
     FileReader reader = new FileReader(descriptor.getFileDescriptor());
-    */
-
-    /* vraca lokaciju stringa opet
-    public void ispisiProba(View v){
-
-        TextView proba = (TextView) findViewById(R.id.editTextProba);
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(context.getAssets().open("about.txt")));
-            String test;
-            int anzahl=0;
-            while ((test=br.readLine()) != null)
-            {
-                anzahl++;
-            }
-
-            String[] array = new String[anzahl];
-
-            String line;
-            int i = 0;
-
-            while((line=br.readLine())!=null)
-            {
-                array[i] = line;
-                i++;
-            }
-
-            proba.setText(array.toString());
-
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
     */
 
 
