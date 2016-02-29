@@ -1,24 +1,33 @@
 package com.aperslajsgmail.converter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
-import android.view.MotionEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.text.NumberFormat;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.StringWriter;
+import java.io.Writer;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    //Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
         */
 
 
-        Toast.makeText(getApplicationContext(), "Click me for other converters", Toast.LENGTH_LONG).show();
-
+        //Toast.makeText(getApplicationContext(), "Click the picture for other converters", Toast.LENGTH_LONG).show();
 
 
         //Toast
@@ -112,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /*
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -134,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    */
+
 
     //2.20462262
     //0.45359237
@@ -210,6 +218,9 @@ public class MainActivity extends AppCompatActivity {
     //Ukloni dugme CHECKED
     //izbaci negativne brojeve i takva sranja VEC JE OVAKVO
     //ogranici koliko uneti broj moze da bude dugacak CHECKED
+    //ogranici maksimalnu unetu vrednost (npr ako je broj preko 1m nek ga ne povecava) CHECKED
+    //aplikacija pukne kad ukucas prvo tacku CHECKED
+    //promeni sliku puta, ima pozadinu :z CHECKED
     //napravi novi tred da izbegnes The application may be doing too much work on its main thread. NE TREBA?
     //Nista sto menja interfejs se ne stavlja u tred!!! ZBOG OVOGA
     //dodaj slicicu ZA VELICINU TASTATURE
@@ -221,12 +232,8 @@ public class MainActivity extends AppCompatActivity {
     //kreni da zapisujes sve ovo sto trazis u word file sa linkovima i sve
     //napravi da se menjaju ekrani u settings, da ima jedan cm u inci itd
     //ako konkretizujes importe, mozda se smanji velicina aplikacije
-    //ogranici maksimalnu unetu vrednost (npr ako je broj preko 1m nek ga ne povecava)
-    //ali vidi da to ne proverava svaki put
     //kod tate ne staje u ekran i fale slike
-    //aplikacija pukne kad ukucas prvo tacku
     //mozda da tekstove promenis sa sp na dp, da se ne bi menjalo u odnosu na tastaturu
-    //promeni sliku puta, ima pozadinu :z
-
+    //dodaj stringove, da ne budu hardkodovana imena
 
 }
