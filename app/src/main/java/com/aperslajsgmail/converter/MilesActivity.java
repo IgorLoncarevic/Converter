@@ -101,7 +101,7 @@ public class MilesActivity extends AppCompatActivity {
     }
 
     public void slikaOnClick(View v){
-        startActivity(new Intent(getApplicationContext(), KilogramsActivity.class));
+        startActivity(new Intent(getApplicationContext(), TimeActivity.class));
     }
 
     public void onBackPressed() {

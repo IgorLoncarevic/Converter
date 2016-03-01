@@ -99,7 +99,7 @@ public class InchesActivity extends AppCompatActivity {
     }
 
     public void slikaOnClick(View v){
-        startActivity(new Intent(getApplicationContext(), KilogramsActivity.class));
+        startActivity(new Intent(getApplicationContext(), MilesActivity.class));
     }
 
     public void onBackPressed() {
