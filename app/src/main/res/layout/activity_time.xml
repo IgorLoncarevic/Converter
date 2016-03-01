@@ -10,18 +10,19 @@
     tools:context="com.aperslajsgmail.converter.TimeActivity">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView">
+        android:layout_height="match_parent">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout2">
 
 
                 <LinearLayout
@@ -202,16 +203,17 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <TextClock
+                android:id="@+id/textClock9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format12Hour="MMM dd, yyyy hh:mm:ss a"
+                android:onClick="satOnClick"
+                android:textSize="24dp"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
     </ScrollView>
 
-    <TextClock
-        android:id="@+id/textClock9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:format12Hour="MMM dd, yyyy hh:mm:ss a"
-        android:textSize="24dp"
-        android:layout_alignBottom="@+id/scrollView"
-        android:layout_centerHorizontal="true"
-        android:onClick="satOnClick" />
+
 </RelativeLayout>
