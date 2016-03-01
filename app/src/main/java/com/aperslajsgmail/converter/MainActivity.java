@@ -153,5 +153,7 @@ public class MainActivity extends AppCompatActivity {
     //vidi kako da promenis naslove aktivitija, posto se vide kad otvoris app
     //izbrisi iz ove metode sve sto ne treba i izbrisi slike koje ne koristis
     //promeni sliku aplikacije
+    //PROMENI MOJ MEJL
+    //dodaj wilks score i slicne zajebancije ali to kao u my profile, ne u brzu konverziju
 
 }

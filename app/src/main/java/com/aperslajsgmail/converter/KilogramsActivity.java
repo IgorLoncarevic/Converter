@@ -11,6 +11,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -22,7 +24,6 @@ public class KilogramsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_kilograms);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         //Toast
         //Toast.makeText(getApplicationContext(), "Number is too big.", Toast.LENGTH_SHORT).show();

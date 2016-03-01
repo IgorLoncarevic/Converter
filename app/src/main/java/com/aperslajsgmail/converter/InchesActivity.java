@@ -103,6 +103,11 @@ public class InchesActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), KilogramsActivity.class));
     }
 
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        return;
+    }
+
 
 
 

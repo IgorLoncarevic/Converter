@@ -5,6 +5,7 @@
     <string name="funte"><![CDATA[kg -> lbs]]></string>
     <string name="kilogrami"><![CDATA[lbs -> kg]]></string>
     <string name="inci"><![CDATA[cm -> inches]]></string>
-    <string name="title_activity_about">AboutActivity</string>
-    <string name="title_activity_kilograms">KilogramsActivity</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_kilograms">Kilograms</string>
+    <string name="title_activity_inches">Inches</string>
 </resources>
