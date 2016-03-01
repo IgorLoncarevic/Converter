@@ -6,4 +6,5 @@
     <string name="kilogrami"><![CDATA[lbs -> kg]]></string>
     <string name="inci"><![CDATA[cm -> inches]]></string>
     <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_kilograms">KilogramsActivity</string>
 </resources>

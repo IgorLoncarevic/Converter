@@ -12,96 +12,39 @@
     tools:context="com.aperslajsgmail.converter.MainActivity"
     >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose converter"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp" />
+
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/unetiEdit"
-            android:textSize="32sp"
-            android:layout_marginLeft="16sp"
-            android:layout_marginTop="16sp"
-            android:layout_marginRight="16sp"
-            android:layout_marginBottom="16sp"
-            android:hint="@string/zaUneti"
-            android:ellipsize="start"
-            android:gravity="center_horizontal"
-            android:maxLength="7"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/funte"
-            android:id="@+id/lbsTxt"
-            android:textSize="24sp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16sp"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/lbsEdit"
-            android:textSize="32sp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="0sp"
-            android:layout_marginLeft="16sp"
-            android:layout_marginRight="16sp"
-            android:layout_marginBottom="16sp"
-            android:enabled="false"
-            android:textIsSelectable="false"
-            android:ellipsize="start"
-            android:gravity="center_horizontal"
-            android:textColor="#000000"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/kilogrami"
-            android:id="@+id/kgTxt"
-            android:textSize="24sp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16sp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/kgEdit"
-            android:textSize="32sp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="16sp"
-            android:layout_marginRight="16sp"
-            android:layout_marginBottom="16sp"
-            android:textIsSelectable="false"
-            android:layout_marginTop="0sp"
-            android:enabled="false"
-            android:ellipsize="start"
-            android:gravity="center_horizontal"
-            android:textColor="#000000"/>
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView"
+        android:weightSum="1"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/imageView"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/libra"
-            android:contentDescription="slika1"
-            android:onClick="slikaOnClick"
-            />
+            android:layout_width="130dp"
+            android:layout_height="144dp"
+            android:id="@+id/imageViewKg"
+            android:src="@drawable/weight"
+            android:onClick="kgOnClick" />
 
+        <ImageView
+            android:layout_width="155dp"
+            android:layout_height="123dp"
+            android:id="@+id/imageViewInch"
+            android:src="@drawable/drawing1"
+            android:layout_gravity="right"
+            android:onClick="inchOnClick" />
     </LinearLayout>
 </RelativeLayout>

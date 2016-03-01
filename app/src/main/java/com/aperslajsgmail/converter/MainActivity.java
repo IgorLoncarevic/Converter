@@ -41,72 +41,6 @@ public class MainActivity extends AppCompatActivity {
         //Toast.makeText(getApplicationContext(), "Click the picture for other converters", Toast.LENGTH_LONG).show();
 
 
-        //Toast
-        //Toast.makeText(getApplicationContext(), "Number is too big.", Toast.LENGTH_SHORT).show();
-        Context contextToast = getApplicationContext();
-        CharSequence txtToast = "Number is to big!";
-        int durationToast = Toast.LENGTH_SHORT;
-
-        final Toast toast = Toast.makeText(contextToast, txtToast, durationToast);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-
-
-        //ovo van klase stavi ljaljane
-        final EditText u = (EditText) findViewById(R.id.unetiEdit);
-        final EditText lbs = (EditText) findViewById(R.id.lbsEdit);
-        final EditText kg = (EditText) findViewById(R.id.kgEdit);
-
-        u.addTextChangedListener(new TextWatcher() {
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            public void afterTextChanged(Editable s) {
-                // set new value now
-                //l.setText(u.getText().toString()); //ovo bi prepisivalo samo tekst
-
-                //ovaj if mi sluzi da kad obrisem tekst, ne pukne aplikacija
-                if(/*u.getText().toString() == null ||*/ u.getText().toString().trim().equals("")) {
-                    lbs.setText("");
-                    kg.setText("");
-                }else if(u.getText().toString().length() > 6){
-                    //double b = 1000000;
-                    //displayLbs(b);
-                    //displayKg(b);
-
-                    toast.setText("Number is too long!");
-                    toast.show();
-
-                    lbs.setText("error");
-                    kg.setText("error");
-
-                }else{
-                    try {
-                        double b = Double.parseDouble(u.getText().toString());
-                        displayLbs(b);
-                        displayKg(b);
-                    }
-                    catch (NumberFormatException e){
-                        //Toast.makeText(MainActivity.this,"Please Enter a valid double value",Toast.LENGTH_SHORT).show();
-                    }
-
-
-                    //if(u.getText().charAt(0) == '.'){
-                        //b = Double.parseDouble("0" + u.getText().toString());
-                        //KOPIRANO S NETA: str= str.replaceAll("\\.", "");
-                        //b = Double.parseDouble(u.getText().toString().replace("\\.","0."));
-                    //}
-
-                }
-
-            }
-
-
-        });
 
     }
 
@@ -144,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     try {
         BufferedReader br = new BufferedReader(new InputStreamReader(context.getAssets().open("about.txt")));
     } catch (IOException e) {
-        // TODO Auto-generated catch block
+        //
         e.printStackTrace();
     }
 
@@ -154,46 +88,16 @@ public class MainActivity extends AppCompatActivity {
     */
 
 
-    //2.20462262
-    //0.45359237
 
-    private void displayLbs(double number) {
-        EditText lbs = (EditText) findViewById(R.id.lbsEdit);
-        double racun = number * 2.20462262;
-        double vrednost;
-        if(number > 1) {
-            vrednost = Math.round(racun * 100d) / 100d;
-        }else if(number >= 0){
-            vrednost = Math.round(racun * 100000d) / 100000d;
-        }else{
-            lbs.setText("error");
-            return;
-        }
 
-        lbs.setText("" + vrednost);
+
+    public void kgOnClick(View v){
+        startActivity(new Intent(getApplicationContext(), KilogramsActivity.class));
     }
 
-    private void displayKg(double number) {
-        EditText kg = (EditText) findViewById(R.id.kgEdit);
-        double racun = number * 0.45359237;
-        double vrednost;
-        if(number > 1) {
-            vrednost = Math.round(racun* 100d)/100d;
-        }else if(number >= 0){
-            vrednost = Math.round(racun * 100000d) / 100000d;
-        }else{
-            kg.setText("error");
-            return;
-        }
-
-        kg.setText("" + vrednost);
-    }
-
-    public void slikaOnClick(View v){
+    public void inchOnClick(View v){
         startActivity(new Intent(getApplicationContext(), InchesActivity.class));
     }
-
-
 
     /*
     //funkcija koja je sluzila za dugme kog vise nema
@@ -245,5 +149,9 @@ public class MainActivity extends AppCompatActivity {
     //kod tate ne staje u ekran i fale slike
     //mozda da tekstove promenis sa sp na dp, da se ne bi menjalo u odnosu na tastaturu
     //dodaj stringove, da ne budu hardkodovana imena
+    //kad otvoris app pise version 1.0, vidi kako se to menja
+    //vidi kako da promenis naslove aktivitija, posto se vide kad otvoris app
+    //izbrisi iz ove metode sve sto ne treba i izbrisi slike koje ne koristis
+    //promeni sliku aplikacije
 
 }

@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.aperslajsgmail.converter.InchesActivity"
+    tools:context="com.aperslajsgmail.converter.KilogramsActivity"
     >
 
     <LinearLayout
@@ -30,7 +30,7 @@
             android:layout_marginTop="16sp"
             android:layout_marginRight="16sp"
             android:layout_marginBottom="16sp"
-            android:hint="Enter length"
+            android:hint="@string/zaUneti"
             android:ellipsize="start"
             android:gravity="center_horizontal"
             android:maxLength="7"
@@ -40,18 +40,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/inci"
-            android:id="@+id/inchesTxt"
+            android:text="@string/funte"
+            android:id="@+id/lbsTxt"
             android:textSize="24sp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16sp" />
+            android:layout_marginTop="16sp"
+            />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/inchEdit"
+            android:id="@+id/lbsEdit"
             android:textSize="32sp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="0sp"
@@ -68,8 +69,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="inches -> cm"
-            android:id="@+id/cmTxt"
+            android:text="@string/kilogrami"
+            android:id="@+id/kgTxt"
             android:textSize="24sp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16sp" />
@@ -79,7 +80,7 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
-            android:id="@+id/cmEdit"
+            android:id="@+id/kgEdit"
             android:textSize="32sp"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="16sp"
@@ -97,9 +98,14 @@
             android:layout_height="match_parent"
             android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/path1a"
-            android:contentDescription="slika2"
-            android:onClick="slikaOnClick" />
+            android:src="@drawable/libra"
+            android:contentDescription="slika1"
+            android:onClick="slikaOnClick"
+            />
 
     </LinearLayout>
+
+
+
+
 </RelativeLayout>

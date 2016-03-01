@@ -100,7 +100,7 @@ public class InchesActivity extends AppCompatActivity {
     }
 
     public void slikaOnClick(View v){
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        startActivity(new Intent(getApplicationContext(), KilogramsActivity.class));
     }
 
 

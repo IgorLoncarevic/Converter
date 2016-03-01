@@ -25,14 +25,20 @@
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_activity_about"
-            android:theme="@style/AppTheme.NoActionBar"
             android:noHistory="true"
-            android:parentActivityName="com.aperslajsgmail.converter.MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
             <!-- Parent activity meta-data to support API level 4+ -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.aperslajsgmail.converter.MainActivity" />
-            </activity>
+        </activity>
+        <activity
+            android:name=".KilogramsActivity"
+            android:label="@string/title_activity_kilograms"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
