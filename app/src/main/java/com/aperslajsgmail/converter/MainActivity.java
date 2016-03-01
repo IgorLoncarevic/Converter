@@ -99,6 +99,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), InchesActivity.class));
     }
 
+    public void milesOnClick(View v){
+        startActivity(new Intent(getApplicationContext(), MilesActivity.class));
+    }
+
     public void timeOnClick(View v){
         startActivity(new Intent(getApplicationContext(), TimeActivity.class));
     }

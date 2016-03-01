@@ -6,7 +6,8 @@
     <string name="kilogrami"><![CDATA[lbs -> kg]]></string>
     <string name="inci"><![CDATA[cm -> inches]]></string>
     <string name="title_activity_about">About</string>
-    <string name="title_activity_kilograms">Kilograms</string>
-    <string name="title_activity_inches">Inches</string>
+    <string name="title_activity_kilograms">Weight</string>
+    <string name="title_activity_inches">Lenght</string>
     <string name="title_activity_time">World Time</string>
+    <string name="title_activity_miles">Distance</string>
 </resources>
