@@ -39,7 +39,12 @@
             android:name=".KilogramsActivity"
             android:label="@string/title_activity_kilograms"
             android:noHistory="true"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TimeActivity"
+            android:noHistory="true"
+            android:label="@string/title_activity_time"
+            ></activity>
     </application>
 
 </manifest>

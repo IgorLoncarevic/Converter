@@ -17,61 +17,111 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Choose converter"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginBottom="35dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:text="Choose converter"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
-
-    <ImageView
-        android:id="@+id/imageViewKg"
-        android:layout_width="130dp"
-        android:layout_height="144dp"
-        android:onClick="kgOnClick"
-        android:src="@drawable/weight"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp" />
+        android:layout_below="@+id/textView">
 
-    <ImageView
-        android:id="@+id/imageViewInch"
-        android:layout_width="155dp"
-        android:layout_height="123dp"
-        android:layout_gravity="right"
-        android:onClick="inchOnClick"
-        android:src="@drawable/drawing1"
-        android:layout_alignTop="@+id/imageViewKg"
-        android:layout_alignParentRight="true"
+        <ImageView
+            android:id="@+id/imageViewKg"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="21dp"
+            android:onClick="kgOnClick"
+            android:src="@drawable/weight" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewKg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="18dp"
+            android:text="kg &lt;-> lbs"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginRight="19dp"
-        android:layout_marginEnd="19dp" />
+        android:layout_alignTop="@+id/relativeLayout"
+        android:id="@+id/relativeLayout2">
+
+        <ImageView
+            android:id="@+id/imageViewInch"
+            android:layout_width="155dp"
+            android:layout_height="123dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_gravity="right"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="19dp"
+            android:onClick="inchOnClick"
+            android:src="@drawable/drawing1" />
 
 
-    <TextView
-        android:id="@+id/textView2"
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewInch"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="39dp"
+            android:text="cm &lt;-> inch"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="kg &lt;-> lbs"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_below="@+id/imageViewKg"
-        android:layout_alignLeft="@+id/imageViewKg"
-        android:layout_alignStart="@+id/imageViewKg"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp" />
+        android:orientation="vertical"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignStart="@+id/relativeLayout2"
+        android:id="@+id/relativeLayout3">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="cm &lt;-> inch"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_marginRight="39dp"
-        android:layout_marginEnd="39dp"
-        android:layout_below="@+id/imageViewKg"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <ImageView
+            android:id="@+id/imageViewTime"
+            android:layout_width="155dp"
+            android:layout_height="123dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="40dp"
+            android:onClick="timeOnClick"
+            android:src="@drawable/clock1" />
 
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewTime"
+            android:layout_centerHorizontal="true"
+            android:text="Time zones"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/relativeLayout3"
+        android:layout_alignEnd="@+id/relativeLayout">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
 </RelativeLayout>
