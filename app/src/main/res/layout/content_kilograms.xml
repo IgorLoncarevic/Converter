@@ -98,7 +98,7 @@
             android:layout_height="match_parent"
             android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/libra"
+            android:src="@drawable/other"
             android:contentDescription="slika1"
             android:onClick="slikaOnClick"
             />
