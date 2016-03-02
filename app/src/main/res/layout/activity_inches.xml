@@ -99,7 +99,8 @@
             android:layout_gravity="center_horizontal"
             android:src="@drawable/tool"
             android:contentDescription="slika2"
-            android:onClick="slikaOnClick" />
+            android:onClick="slikaOnClick"
+            android:layout_margin="5sp" />
 
     </LinearLayout>
 </RelativeLayout>
