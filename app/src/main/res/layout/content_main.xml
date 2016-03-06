@@ -11,133 +11,142 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.aperslajsgmail.converter.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="35dp"
-        android:layout_marginTop="20dp"
-        android:text="Choose converter:"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView">
-
-        <ImageView
-            android:id="@+id/imageViewKg"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="21dp"
-            android:onClick="kgOnClick"
-            android:src="@drawable/weight" />
-
-        <TextView
-            android:id="@+id/textView2"
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewKg"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="18dp"
-            android:text="kg &lt;-> lbs"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-    </RelativeLayout>
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="35dp"
+                android:layout_marginTop="20dp"
+                android:text="Choose converter:"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView">
+
+                <ImageView
+                    android:id="@+id/imageViewKg"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="21dp"
+                    android:onClick="kgOnClick"
+                    android:src="@drawable/weight" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewKg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="18dp"
+                    android:text="kg &lt;-> lbs"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
 
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/relativeLayout"
-        android:id="@+id/relativeLayout2">
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/relativeLayout">
 
-        <ImageView
-            android:id="@+id/imageViewInch"
-            android:layout_width="155dp"
-            android:layout_height="123dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/textView3"
-            android:layout_gravity="right"
-            android:layout_marginBottom="7dp"
-            android:layout_marginRight="19dp"
-            android:onClick="inchOnClick"
-            android:src="@drawable/drawing1" />
+                <ImageView
+                    android:id="@+id/imageViewInch"
+                    android:layout_width="155dp"
+                    android:layout_height="123dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/textView3"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="19dp"
+                    android:onClick="inchOnClick"
+                    android:src="@drawable/drawing1" />
 
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewInch"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="right"
-            android:layout_marginRight="39dp"
-            android:text="cm &lt;-> inch"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewInch"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="39dp"
+                    android:text="cm &lt;-> inch"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_alignStart="@+id/relativeLayout2"
-        android:id="@+id/relativeLayout3">
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/relativeLayout2"
+                android:layout_below="@+id/relativeLayout"
+                android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageViewTime"
-            android:layout_width="155dp"
-            android:layout_height="123dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="40dp"
-            android:onClick="timeOnClick"
-            android:src="@drawable/clock1"
-            android:layout_marginLeft="10dp" />
+                <ImageView
+                    android:id="@+id/imageViewTime"
+                    android:layout_width="155dp"
+                    android:layout_height="123dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:onClick="timeOnClick"
+                    android:src="@drawable/clock1" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageViewTime"
-            android:layout_centerHorizontal="true"
-            android:text="  Time zones"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewTime"
+                    android:layout_centerHorizontal="true"
+                    android:text="  Time zones"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    </RelativeLayout>
+            </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/relativeLayout3"
-        android:layout_alignEnd="@+id/relativeLayout"
-        android:id="@+id/relativeLayout4">
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/relativeLayout"
+                android:layout_alignTop="@+id/relativeLayout3">
 
-        <ImageView
-            android:layout_width="144dp"
-            android:layout_height="144dp"
-            android:id="@+id/imageView2"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/truck"
-            android:layout_marginTop="30dp"
-            android:onClick="milesOnClick" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="30dp"
+                    android:onClick="milesOnClick"
+                    android:src="@drawable/truck" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="km &lt;-> miles"
-            android:id="@+id/textView13"
-            android:layout_below="@+id/imageView2"
-            android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_centerHorizontal="true"
+                    android:text="km &lt;-> miles"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    </RelativeLayout>
-
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

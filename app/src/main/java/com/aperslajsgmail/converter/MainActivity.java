@@ -107,6 +107,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), TimeActivity.class));
     }
 
+    public void onBackPressed() {
+        android.os.Process.killProcess(android.os.Process.myPid());
+    }
+
+
+
     /*
     //funkcija koja je sluzila za dugme kog vise nema
 
